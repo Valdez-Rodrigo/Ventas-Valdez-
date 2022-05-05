@@ -1,5 +1,6 @@
-import styled from 'styled-components'
-import { NavBar } from 'react-bootstrap';
+import React from 'react';
+import {Nav,Container} from 'react-bootstrap';
+import CartWidget from './components/CartWidget'
 
 function NavBar() {
   return (
@@ -12,8 +13,9 @@ function NavBar() {
                         <Nav.Link href="#features">Inmobiliario</Nav.Link>
                         <Nav.Link href="#pricing">Publicaciones</Nav.Link>
                     </Nav>
+                    <CartWidget></CartWidget>
             </Container>
-        </NavBar> 
+        </NavBar>
     </div>
   );
 }

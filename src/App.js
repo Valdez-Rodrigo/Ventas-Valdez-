@@ -1,12 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
 import NavBar from './components/NavBar';
-import { NavBar } from 'react-bootstrap';
+import CartWidget from './components/CartWidget'
+
 
 function App() {
   return (
     <div className="App">
-        <NavBar></NavBar>
+        <NavBar>
+          <CartWidget></CartWidget>
+        </NavBar>
     </div>
   );
 }
