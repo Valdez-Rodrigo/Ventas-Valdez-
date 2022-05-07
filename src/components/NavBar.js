@@ -1,23 +1,32 @@
-import React from 'react';
-import {Nav,Container} from 'react-bootstrap';
-import CartWidget from './components/CartWidget'
+import React, {Fragment} from 'react';
+import {Navbar, Container, Nav, NavDropdown} from 'react-bootstrap';
+import CartWidget from './CartWidget'
 
-function NavBar() {
+const NavBarComponent = () => {
   return (
-    <div>
-       <NavBar bg="dark" variant="dark">
-            <Container>
-                <NavBar.Brand href="#home">NavBar</NavBar.Brand>
-                    <Nav className="me-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#features">Inmobiliario</Nav.Link>
-                        <Nav.Link href="#pricing">Publicaciones</Nav.Link>
-                    </Nav>
-                    <CartWidget></CartWidget>
-            </Container>
-        </NavBar>
-    </div>
+    <Fragment>
+      <Navbar bg="light" expand="lg">
+        <Container>
+          <Navbar.Brand href="#home">Ventas</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link href="#home">Home</Nav.Link>
+              <Nav.Link href="#link">Link</Nav.Link>
+              <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+              </NavDropdown>
+            </Nav>
+          </Navbar.Collapse>
+          <CartWidget />
+        </Container>
+      </Navbar>
+    </Fragment>
   );
 }
 
-export default NavBar;
+export default NavBarComponent;
