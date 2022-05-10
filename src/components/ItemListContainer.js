@@ -1,9 +1,10 @@
 import React, {Fragment} from 'react';
 import {Table, Button} from 'react-bootstrap';
 
-function ItemListContainer() {
+function ItemListContainer({saludo}) {
     return (
         <fragment>
+            <h1>{saludo}</h1>
             <Table className='responsive'>
                 <thead>
                     <tr>
