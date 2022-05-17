@@ -2,7 +2,7 @@ import './App.css';
 import React from 'react';
 import NavBarComponent from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
-import img from './logo.svg'
+import img from './logo.svg';
 import ItemCount from './components/ItemCount';
 
 

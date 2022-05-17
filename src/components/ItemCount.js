@@ -1,35 +1,33 @@
 import React, {useState, useEffect} from 'react'
+import PropTypes from 'prop-types';
 import { Fragment } from 'react';
 import {Button} from 'react-bootstrap'
 
-function ItemCount() {
-    const [numero, setNumero] = useState(0)
-    const [boton, setBoton] = useState('Add to Cart')
+export default function ItemCount({value}) {
 
-    const suma = () => {
-        setNumero(numero + 1);
-    };
+    const [counter, setCounter] = useState(value);
 
-    const handleButton = () => {
-        setBoton('Next Purchase')
-    };
-
-    useEffect (() => {
-
-    }, [boton]);
+    const handleAdd = () => setCounter(counter + 1);
+    const handleSubstract = () => setCounter(counter - 1);
+    const handleReset = () => setCounter(value);
 
   return (
     <Fragment>
         <div className='mb-2'>
-            <Button variant="outline-primary" size="sm">-</Button>{' '}
-            <p>{numero}</p>
-            <Button variant="outline-primary" size="sm" onClick={suma}>+</Button>{' '}
-        </div>
-        <div>
-            <Button variant="primary" onClick={handleButton}>{boton}</Button>{' '}
+            <h1>Counter</h1>
+            <h2>{counter}</h2>
+            <Button onClick={handleSubstract} variant="outline-primary" size="sm">-1</Button>{' '}
+            <Button onClick={handleReset} variant="primary" size="sm">Reset</Button>{' '}
+            <Button onClick={handleAdd} variant="outline-primary" size="sm">+1</Button>{' '}
         </div>
     </Fragment>
-  )
+  );
+};
+
+ItemCount.propTypes = {
+    value: PropTypes.number
 }
 
-export default ItemCount;
+ItemCount.defaultProps = {
+    value: 0
+};
