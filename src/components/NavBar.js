@@ -1,13 +1,14 @@
 import React, {Fragment} from 'react';
 import {Navbar, Container, Nav, NavDropdown} from 'react-bootstrap';
-import CartWidget from './CartWidget'
+import CartWidget from './CartWidget';
+// import Image from 'react-bootstrap/Image';
 
 const NavBarComponent = () => {
   return (
     <Fragment>
       <Navbar bg="light" expand="lg">
         <Container>
-          <Navbar.Brand href="#home">Ventas</Navbar.Brand>
+          <Navbar.Brand href="#home">Ross Inmobiliaria</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">

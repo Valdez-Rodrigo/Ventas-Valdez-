@@ -1,8 +1,8 @@
 import React from 'react'
 import {Card, Button} from 'react-bootstrap';
 
-const Item = ({item}) => {
-    const {name, price, image} = item;
+const Item = ({items}) => {
+    const {name, price, image} = items;
 
   return (
     <div>
