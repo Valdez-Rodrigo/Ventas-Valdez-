@@ -2,15 +2,13 @@ import React from 'react';
 import Item from './Item';
 
 const ItemList = ({items}) => {
-
   return (
-    <div>
-        {items.map((iteracion) =>{
-            return 
-            <Item key={iteracion.id} item={iteracion} />
+    <div className='item-list'>
+        {items.map(item =>{
+            return <Item key={item.id} item={item} />;
             })}
     </div>
   );
-};
+}
 
 export default ItemList;
